@@ -3,7 +3,7 @@
 from http.server import BaseHTTPRequestHandler  # built in class,  I can use it when I need to create/implement server function
 
 class handler(BaseHTTPRequestHandler):
-    def do_Get(self):
+    def do_GET(self):
         self.send_response(200) # send_response -> inhert, related to BaseHTTPRequestHandler, to allow the developer to response
         self.send_header('Content-type', 'text/plain') # send_header -> response the content type of the message itself
         self.end_headers() # end_headers -> the header size is not fixed
